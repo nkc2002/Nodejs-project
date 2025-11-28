@@ -9,11 +9,6 @@ app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "public", "index.html"));
 });
 
-// Xử lý các route không tìm thấy
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "public", "index.html"));
-});
-
 // Bắt đầu server khi chạy local
 app.listen(PORT, () => {
   console.log(`Server đang chạy tại http://localhost:${PORT}`);
